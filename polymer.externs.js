@@ -20,14 +20,14 @@ var Polymer = function(prototype) {};
 
 /** @constructor @extends {HTMLElement} */
 var PolymerElement = function() {
-  /** @type {Object.<string,!HTMLElement>} */
+  /** @type {Object<string,!HTMLElement>} */
   this.$;
 };
 
 /** @type {string} The Custom element tag name. */
 PolymerElement.prototype.is;
 
-/** @type {?string} The native element this element extends. */
+/** @type {string} The native element this element extends. */
 PolymerElement.prototype.extends;
 
 /** On create callback. */
@@ -46,27 +46,27 @@ PolymerElement.prototype.detached = function() {};
  */
 PolymerElement.prototype.attributeChanged = function(name) {};
 
-/** @typedef {Object.<string,*>} */
+/** @typedef {Object<string,*>} */
 PolymerElement.PropertyConfig;
 
-/** @typedef {Object.<string,(Function|PolymerElement.PropertyConfig)} */
+/** @typedef {Object<string,(Function|PolymerElement.PropertyConfig)} */
 PolymerElement.Properties;
 
 /** @type {PolymerElement.Properties} */
 PolymerElement.prototype.properties;
 
-/** @type {Object.<string,*} */
+/** @type {Object<string,*>} */
 PolymerElement.prototype.hostAttributes;
 
 /**
  * An array of objects whose properties get mixed in to this element.
- * @type {Array.<Object>}
+ * @type {Array<Object>}
  */
 PolymerElement.prototype.mixin;
 
 /**
  * An object that maps events to event handler function names.
- * @type {Object.<string,string>}
+ * @type {Object<string,string>}
  */
 PolymerElement.prototype.listeners;
 
