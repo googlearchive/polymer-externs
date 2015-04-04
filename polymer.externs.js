@@ -75,7 +75,7 @@ PolymerElement.prototype.listeners;
  * @param  {string} path  The path to set.
  * @param  {*}      value The value to send in the update notification.
  */
-PolymerElement.prototype.notifyPath = function(path, value);
+PolymerElement.prototype.notifyPath = function(path, value) {};
 
 
 /**
@@ -83,7 +83,7 @@ PolymerElement.prototype.notifyPath = function(path, value);
  * @param  {string} path  The path to set.
  * @param  {*}      value The new value.
  */
-PolymerElement.prototype.setPathValue = function(path, value);
+PolymerElement.prototype.setPathValue = function(path, value) {};
 
 /**
  * Fire an event.
