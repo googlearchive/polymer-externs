@@ -13,14 +13,19 @@
  */
 
 /**
- * @param {PolymerElement} prototype The prototype of the element.
+ * @param {!{
+ *   is: string,
+ *   observers: (!Object<string, string>|undefined),
+ *   mixins: (!Array<!Object>|undefined)
+ * }} descriptor The Polymer descriptor of the element.
+ * @see https://github.com/Polymer/polymer/blob/0.8-preview/PRIMER.md#custom-element-registration
  */
-var Polymer = function(prototype) {};
+var Polymer = function(descriptor) {};
 
 
 /** @constructor @extends {HTMLElement} */
 var PolymerElement = function() {
-  /** @type {Object<string,!HTMLElement>} */
+  /** @type {!Object<string,!HTMLElement>} */
   this.$;
 };
 
@@ -29,6 +34,22 @@ PolymerElement.prototype.is;
 
 /** @type {string} The native element this element extends. */
 PolymerElement.prototype.extends;
+
+/**
+ * An array of objects whose properties get mixed in to this element.
+ *
+ * @type {!Array<!Object>|undefined}
+ */
+PolymerElement.prototype.mixins;
+
+/**
+ * A string-separated list of dependent properties that should result in a
+ * change function being called. These observers differ from single-property
+ * observers in that the change handler is called asynchronously.
+ *
+ * @type {!Object<string, string>|undefined}
+ */
+PolymerElement.prototype.observers;
 
 /** On create callback. */
 PolymerElement.prototype.created = function() {};
@@ -46,27 +67,29 @@ PolymerElement.prototype.detached = function() {};
  */
 PolymerElement.prototype.attributeChanged = function(name) {};
 
-/** @typedef {Object<string,*>} */
+/** @typedef {!{
+ *    type: !Function,
+ *    reflectToAttribute: (boolean|undefined),
+ *    readOnly: (boolean|undefined),
+ *    notify: (boolean|undefined),
+ *    value: *,
+ *    computed: (string|undefined),
+ *    observer: (string|undefined)
+ *  }} */
 PolymerElement.PropertyConfig;
 
-/** @typedef {Object<string,(Function|PolymerElement.PropertyConfig)} */
+/** @typedef {!Object<string, (!Function|!PolymerElement.PropertyConfig)>} */
 PolymerElement.Properties;
 
-/** @type {PolymerElement.Properties} */
+/** @type {!PolymerElement.Properties} */
 PolymerElement.prototype.properties;
 
-/** @type {Object<string,*>} */
+/** @type {!Object<string, *>} */
 PolymerElement.prototype.hostAttributes;
 
 /**
- * An array of objects whose properties get mixed in to this element.
- * @type {Array<Object>}
- */
-PolymerElement.prototype.mixin;
-
-/**
  * An object that maps events to event handler function names.
- * @type {Object<string,string>}
+ * @type {!Object<string, string>}
  */
 PolymerElement.prototype.listeners;
 
@@ -76,7 +99,6 @@ PolymerElement.prototype.listeners;
  * @param  {*}      value The value to send in the update notification.
  */
 PolymerElement.prototype.notifyPath = function(path, value) {};
-
 
 /**
  * Shorthand for setting a property, then calling notifyPath.
@@ -98,3 +120,4 @@ PolymerElement.prototype.setPathValue = function(path, value) {};
  */
 PolymerElement.prototype.fire =
     function(type, detail, onNode, bubbles, cancelable) {};
+
