@@ -13,11 +13,7 @@
  */
 
 /**
- * @param {!{
- *   is: string,
- *   observers: (!Object<string, string>|undefined),
- *   mixins: (!Array<!Object>|undefined)
- * }} descriptor The Polymer descriptor of the element.
+ * @param {!{is: string}} descriptor The Polymer descriptor of the element.
  * @see https://github.com/Polymer/polymer/blob/0.8-preview/PRIMER.md#custom-element-registration
  */
 var Polymer = function(descriptor) {};
