@@ -107,7 +107,7 @@ PolymerElement.prototype.setPathValue = function(path, value) {};
  * Fire an event.
  *
  * @param {string} type An event name.
- * @param {*=} detail
+ * @param {Object=} detail
  * @param {{
  *   bubbles: (boolean|undefined),
  *   cancelable: (boolean|undefined),
