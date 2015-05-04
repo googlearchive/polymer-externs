@@ -108,12 +108,11 @@ PolymerElement.prototype.setPathValue = function(path, value) {};
  *
  * @param {string} type An event name.
  * @param {*=} detail
- * @param {Node=} onNode Target node.
- * @param {boolean=} bubbles Set false to prevent bubbling, defaults to true.
- * @param {boolean=} cancelable Set false to prevent cancellation, defaults to
- *     true.
+ * @param {{
+ *   bubbles: (boolean|undefined),
+ *   cancelable: (boolean|undefined),
+ *   node: (!HTMLElement|undefined)}=} options
  * @return {Object} event
  */
-PolymerElement.prototype.fire =
-    function(type, detail, onNode, bubbles, cancelable) {};
+PolymerElement.prototype.fire = function(type, detail, options) {};
 
