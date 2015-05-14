@@ -29,6 +29,18 @@ var PolymerElement = function() {};
 PolymerElement.prototype.$;
 
 /**
+ * True if the element has been attached to the DOM.
+ * @type {boolean}
+ */
+PolymerElement.prototype.isAttached;
+
+/**
+ * The root node of the element.
+ * @type {!Node}
+ */
+PolymerElement.prototype.root;
+
+/**
  * Returns the first node in this element’s local DOM that matches selector.
  * @param {string} selector
  */
