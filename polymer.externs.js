@@ -247,3 +247,96 @@ PolymerElement.prototype.arrayDelete = function(array, item) {};
  */
 PolymerElement.prototype.resolveUrl = function(url) {};
 
+
+/**
+ * A Polymer DOM API for manipulating DOM such that local DOM and light DOM
+ * trees are properly maintained.
+ *
+ * @constructor
+ */
+var PolymerDomApi = function() {};
+
+/** @param {!Node} node */
+PolymerDomApi.prototype.appendChild = function(node) {};
+
+/**
+ * @param {!Node} node
+ * @param {!Node} beforeNode
+ */
+PolymerDomApi.prototype.insertBefore = function(node, beforeNode) {};
+
+/** @param {!Node} node */
+PolymerDomApi.prototype.removeChild = function(node) {};
+
+/** @type {!Array<!Node>} */
+PolymerDomApi.prototype.childNodes;
+
+/** @type {?Node} */
+PolymerDomApi.prototype.parentNode;
+
+/** @type {?Node} */
+PolymerDomApi.prototype.firstChild;
+
+/** @type {?Node} */
+PolymerDomApi.prototype.lastChild;
+
+/** @type {?HTMLElement} */
+PolymerDomApi.prototype.firstElementChild;
+
+/** @type {?HTMLElement} */
+PolymerDomApi.prototype.lastElementChild;
+
+/** @type {?Node} */
+PolymerDomApi.prototype.previousSibling;
+
+/** @type {?Node} */
+PolymerDomApi.prototype.nextSibling;
+
+/** @type {string} */
+PolymerDomApi.prototype.textContent;
+
+/** @type {string} */
+PolymerDomApi.prototype.innerHTML;
+
+/**
+ * @param {string} selector
+ * @return {?HTMLElement}
+ */
+PolymerDomApi.prototype.querySelector = function(selector) {};
+
+/**
+ * @param {string} selector
+ * @return {!Array<?HTMLElement>}
+ */
+PolymerDomApi.prototype.querySelectorAll = function(selector) {};
+
+/** @return {!Array<!Node>} */
+PolymerDomApi.prototype.getDistributedNodes = function() {};
+
+/** @return {!Array<!Node>} */
+PolymerDomApi.prototype.getDestinationInsertionPoints = function() {};
+
+/**
+ * @param {string} attribute
+ * @param {string|number|boolean} value Values are converted to strings with
+ *     ToString, so we accept number and boolean since both convert easily to
+ *     strings.
+ */
+PolymerDomApi.prototype.setAttribute = function(attribute, value) {};
+
+/** @param {string} attribute */
+PolymerDomApi.prototype.removeAttribute = function(attribute) {};
+
+/** @type {?DOMTokenList} */
+PolymerDomApi.prototype.classList;
+
+/**
+ * Returns a Polymer-friendly API for manipulating DOM of a specified node.
+ *
+ * @param {?Node} node
+ * @return {!PolymerDomApi}
+ */
+Polymer.dom = function(node) {};
+
+Polymer.dom.flush = function() {};
+
