@@ -118,11 +118,44 @@ PolymerElement.prototype.listeners;
 PolymerElement.prototype.notifyPath = function(path, value) {};
 
 /**
- * Shorthand for setting a property, then calling notifyPath.
- * @param  {string} path  The path to set.
- * @param  {*}      value The new value.
+ * Convienence method for setting a value to a path and notifying any
+ * elements bound to the same path.
+ *
+ * Note, if any part in the path except for the last is undefined,
+ * this method does nothing (this method does not throw when
+ * dereferencing undefined paths).
+ *
+ * @param {(string|Array<(string|number)>)} path Path to the value
+ *   to read.  The path may be specified as a string (e.g. `foo.bar.baz`)
+ *   or an array of path parts (e.g. `['foo.bar', 'baz']`).  Note that
+ *   bracketed expressions are not supported; string-based path parts
+ *   *must* be separated by dots.  Note that when dereferencing array
+ *   indicies, the index may be used as a dotted part directly
+ *   (e.g. `users.12.name` or `['users', 12, 'name']`).
+ * @param {*} value Value to set at the specified path.
+ * @param {Object=} root Root object from which the path is evaluated.
+*/
+PolymerElement.prototype.set = function(path, value, root) {};
+
+/**
+ * Convienence method for reading a value from a path.
+ *
+ * Note, if any part in the path is undefined, this method returns
+ * `undefined` (this method does not throw when dereferencing undefined
+ * paths).
+ *
+ * @param {(string|Array<(string|number)>)} path Path to the value
+ *   to read.  The path may be specified as a string (e.g. `foo.bar.baz`)
+ *   or an array of path parts (e.g. `['foo.bar', 'baz']`).  Note that
+ *   bracketed expressions are not supported; string-based path parts
+ *   *must* be separated by dots.  Note that when dereferencing array
+ *   indicies, the index may be used as a dotted part directly
+ *   (e.g. `users.12.name` or `['users', 12, 'name']`).
+ * @param {Object=} root Root object from which the path is evaluated.
+ * @return {*} Value at the path, or `undefined` if any part of the path
+ *   is undefined.
  */
-PolymerElement.prototype.setPathValue = function(path, value) {};
+PolymerElement.prototype.get = function(path, root) {};
 
 /**
  * Fire an event.
