@@ -53,11 +53,11 @@ PolymerElement.prototype.is;
 PolymerElement.prototype.extends;
 
 /**
- * An array of objects whose properties get mixed in to this element.
- *
+ * An array of objects whose properties get added to this element.
+ * @see https://www.polymer-project.org/1.0/docs/devguide/behaviors.html
  * @type {!Array<!Object>|undefined}
  */
-PolymerElement.prototype.mixins;
+PolymerElement.prototype.behaviors;
 
 /**
  * A string-separated list of dependent properties that should result in a
