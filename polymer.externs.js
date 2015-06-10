@@ -200,11 +200,46 @@ PolymerElement.prototype.toggleAttribute = function(name, bool, node) {};
 PolymerElement.prototype.attributeFollows = function(name, newNode, oldNode) {};
 
 /**
+ * Convenience method to add an event listener on a given element, late bound to
+ * a named method on this element.
+ * @param {!Element} node Element to add event listener to.
+ * @param {string} eventName Name of event to listen for.
+ * @param {string} methodName Name of handler method on this to call.
+ */
+PolymerElement.prototype.listen = function(node, eventName, methodName) {};
+
+/**
+ * Override scrolling behavior to all direction, one direction, or none.
+ *
+ * Valid scroll directions:
+ * 'all': scroll in any direction
+ * 'x': scroll only in the 'x' direction
+ * 'y': scroll only in the 'y' direction
+ * 'none': disable scrolling for this node
+ *
+ * @param {string=} direction Direction to allow scrolling Defaults to all.
+ * @param {HTMLElement=} node Element to apply scroll direction setting.
+ *     Defaults to this.
+ */
+PolymerElement.prototype.setScrollDirection = function(direction, node) {};
+
+/**
  * @param {!Function} method
  * @param {number=} wait
  * @return {number} A handle which can be used to cancel the job.
  */
 PolymerElement.prototype.async = function(method, wait) {};
+
+Polymer.Base;
+
+/**
+ * Used by the promise-polyfill on its own.
+ *
+ * @param {!Function} method
+ * @param {number=} wait
+ * @return {number} A handle which can be used to cancel the job.
+ */
+Polymer.Base.async = function(method, wait) {};
 
 /**
  * @param {number} handle
@@ -364,12 +399,74 @@ PolymerDomApi.prototype.removeAttribute = function(attribute) {};
 PolymerDomApi.prototype.classList;
 
 /**
- * Returns a Polymer-friendly API for manipulating DOM of a specified node.
+ * A Polymer Event API.
  *
- * @param {?Node} node
- * @return {!PolymerDomApi}
+ * @constructor
  */
-Polymer.dom = function(node) {};
+var PolymerEventApi = function() {};
+
+/** @type {?EventTarget} */
+PolymerEventApi.prototype.rootTarget;
+
+/** @type {?EventTarget} */
+PolymerEventApi.prototype.localTarget;
+
+/** @type {?Array<!Element>|undefined} */
+PolymerEventApi.prototype.path;
+
+/**
+ * Returns a Polymer-friendly API for manipulating DOM of a specified node or
+ * an event API for a specified event..
+ *
+ * @param {?Node|?Event} nodeOrEvent
+ * @return {!PolymerDomApi|!PolymerEventApi}
+ */
+Polymer.dom = function(nodeOrEvent) {};
 
 Polymer.dom.flush = function() {};
 
+Polymer.CaseMap;
+
+/**
+ * Convert a string from dash to camel-case.
+ * @param {string} dash
+ * @return {string} The string in camel-case.
+ */
+Polymer.CaseMap.dashToCamelCase = function(dash) {};
+
+/**
+ * Convert a string from camel-case to dash format.
+ * @param {string} camel
+ * @return {string} The string in dash format.
+ */
+Polymer.CaseMap.camelToDashCase = function(camel) {};
+
+
+/**
+ * An Event type fired when moving while finger/button is down.
+ * state - a string indicating the tracking state:
+ *     + start: fired when tracking is first detected (finger/button down and
+ *              moved past a pre-set distance threshold)
+ *     + track: fired while tracking
+ *     + end: fired when tracking ends
+ * x - clientX coordinate for event
+ * y - clientY coordinate for event
+ * dx - change in pixels horizontally since the first track event
+ * dy - change in pixels vertically since the first track event
+ * ddx - change in pixels horizontally since last track event
+ * ddy - change in pixels vertically since last track event
+ * hover() - a function that may be called to determine the element currently
+ *           being hovered
+ *
+ * @typedef {{
+ *   state: string,
+ *   x: number,
+ *   y: number,
+ *   dx: number,
+ *   dy: number,
+ *   ddx: number,
+ *   ddy: number,
+ *   hover: (function(): Node)
+ * }}
+ */
+var PolymerTrackEvent;
