@@ -375,12 +375,29 @@ PolymerDomApi.prototype.removeAttribute = function(attribute) {};
 PolymerDomApi.prototype.classList;
 
 /**
- * Returns a Polymer-friendly API for manipulating DOM of a specified node.
+ * A Polymer Event API.
  *
- * @param {?Node} node
- * @return {!PolymerDomApi}
+ * @constructor
  */
-Polymer.dom = function(node) {};
+var PolymerEventApi = function() {};
+
+/** @type {?EventTarget} */
+PolymerEventApi.prototype.rootTarget;
+
+/** @type {?EventTarget} */
+PolymerEventApi.prototype.localTarget;
+
+/** @type {?Array<!Element>|undefined} */
+PolymerEventApi.prototype.path;
+
+/**
+ * Returns a Polymer-friendly API for manipulating DOM of a specified node or
+ * an event API for a specified event..
+ *
+ * @param {?Node|?Event} nodeOrEvent
+ * @return {!PolymerDomApi|!PolymerEventApi}
+ */
+Polymer.dom = function(nodeOrEvent) {};
 
 Polymer.dom.flush = function() {};
 
