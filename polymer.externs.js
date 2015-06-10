@@ -206,6 +206,17 @@ PolymerElement.prototype.attributeFollows = function(name, newNode, oldNode) {};
  */
 PolymerElement.prototype.async = function(method, wait) {};
 
+Polymer.Base;
+
+/**
+ * Used by the promise-polyfill on its own.
+ *
+ * @param {!Function} method
+ * @param {number=} wait
+ * @return {number} A handle which can be used to cancel the job.
+ */
+Polymer.Base.async = function(method, wait) {};
+
 /**
  * @param {number} handle
  */
@@ -373,3 +384,48 @@ Polymer.dom = function(node) {};
 
 Polymer.dom.flush = function() {};
 
+Polymer.CaseMap;
+
+/**
+ * Convert a string from dash to camel-case.
+ * @param {string} dash
+ * @return {string} The string in camel-case.
+ */
+Polymer.CaseMap.dashToCamelCase = function(dash) {};
+
+/**
+ * Convert a string from camel-case to dash format.
+ * @param {string} camel
+ * @return {string} The string in dash format.
+ */
+Polymer.CaseMap.camelToDashCase = function(camel) {};
+
+
+/**
+ * An Event type fired when moving while finger/button is down.
+ * state - a string indicating the tracking state:
+ *     + start: fired when tracking is first detected (finger/button down and
+ *              moved past a pre-set distance threshold)
+ *     + track: fired while tracking
+ *     + end: fired when tracking ends
+ * x - clientX coordinate for event
+ * y - clientY coordinate for event
+ * dx - change in pixels horizontally since the first track event
+ * dy - change in pixels vertically since the first track event
+ * ddx - change in pixels horizontally since last track event
+ * ddy - change in pixels vertically since last track event
+ * hover() - a function that may be called to determine the element currently
+ *           being hovered
+ *
+ * @typedef {{
+ *   state: string,
+ *   x: number,
+ *   y: number,
+ *   dx: number,
+ *   dy: number,
+ *   ddx: number,
+ *   ddy: number,
+ *   hover: (function(): Node)
+ * }}
+ */
+var PolymerTrackEvent;
