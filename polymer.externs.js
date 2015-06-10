@@ -200,6 +200,15 @@ PolymerElement.prototype.toggleAttribute = function(name, bool, node) {};
 PolymerElement.prototype.attributeFollows = function(name, newNode, oldNode) {};
 
 /**
+ * Convenience method to add an event listener on a given element, late bound to
+ * a named method on this element.
+ * @param {!Element} node Element to add event listener to.
+ * @param {string} eventName Name of event to listen for.
+ * @param {string} methodName Name of handler method on this to call.
+ */
+PolymerElement.prototype.listen = function(node, eventName, methodName) {};
+
+/**
  * @param {!Function} method
  * @param {number=} wait
  * @return {number} A handle which can be used to cancel the job.
