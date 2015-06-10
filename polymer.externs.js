@@ -209,6 +209,21 @@ PolymerElement.prototype.attributeFollows = function(name, newNode, oldNode) {};
 PolymerElement.prototype.listen = function(node, eventName, methodName) {};
 
 /**
+ * Override scrolling behavior to all direction, one direction, or none.
+ *
+ * Valid scroll directions:
+ * 'all': scroll in any direction
+ * 'x': scroll only in the 'x' direction
+ * 'y': scroll only in the 'y' direction
+ * 'none': disable scrolling for this node
+ *
+ * @param {string=} direction Direction to allow scrolling Defaults to all.
+ * @param {HTMLElement=} node Element to apply scroll direction setting.
+ *     Defaults to this.
+ */
+PolymerElement.prototype.setScrollDirection = function(direction, node) {};
+
+/**
  * @param {!Function} method
  * @param {number=} wait
  * @return {number} A handle which can be used to cancel the job.
