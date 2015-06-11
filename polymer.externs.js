@@ -111,6 +111,12 @@ PolymerElement.prototype.hostAttributes;
 PolymerElement.prototype.listeners;
 
 /**
+ * Return the element whose local dom within which this element is contained.
+ * @type {?Element}
+ */
+PolymerElement.prototype.domHost;
+
+/**
  * Notifies the event binding system of a change to a property.
  * @param  {string} path  The path to set.
  * @param  {*}      value The value to send in the update notification.
@@ -286,9 +292,9 @@ PolymerElement.prototype.transform = function(transform, node) {};
 
 /**
  * Transforms the specified node, or this element if no node is specified.
- * @param {string} x
- * @param {string} y
- * @param {string} z
+ * @param {number|string} x
+ * @param {number|string} y
+ * @param {number|string} z
  * @param {HTMLElement=} node
  */
 PolymerElement.prototype.translate3d = function(x, y, z, node) {};
@@ -383,6 +389,9 @@ PolymerDomApi.prototype.getDistributedNodes = function() {};
 
 /** @return {!Array<!Node>} */
 PolymerDomApi.prototype.getDestinationInsertionPoints = function() {};
+
+/** @return {?Node} */
+PolymerDomApi.prototype.getOwnerRoot = function() {};
 
 /**
  * @param {string} attribute
