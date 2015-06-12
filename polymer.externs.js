@@ -512,3 +512,17 @@ Polymer.CaseMap.camelToDashCase = function(camel) {};
  * }}
  */
 var PolymerTrackEvent;
+
+/**
+ * An Event type fired when a finger does down, up, or taps.
+ * x - clientX coordinate for event
+ * y - clientY coordinate for event
+ * sourceEvent - the original DOM event that caused the down action
+ *
+ * @typedef {{
+ *   x: number,
+ *   y: number,
+ *   sourceEvent: Event
+ * }}
+ */
+var PolymerTouchEvent;
