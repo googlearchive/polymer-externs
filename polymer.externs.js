@@ -321,6 +321,39 @@ PolymerElement.prototype.arrayDelete = function(array, item) {};
  */
 PolymerElement.prototype.resolveUrl = function(url) {};
 
+/**
+ * Logs a message to the console.
+ *
+ * @param {!Array} var_args
+ * @protected
+ */
+PolymerElement.prototype._log = function(var_args) {};
+
+/**
+ * Logs a message to the console with a 'warn' level.
+ *
+ * @param {!Array} var_args
+ * @protected
+ */
+PolymerElement.prototype._warn = function(var_args) {};
+
+/**
+ * Logs a message to the console with an 'error' level.
+ *
+ * @param {!Array} var_args
+ * @protected
+ */
+PolymerElement.prototype._error = function(var_args) {};
+
+/**
+ * Formats string arguments together for a console log.
+ *
+ * @param {...*} var_args
+ * @return {!Array} The formatted array of args to a log function.
+ * @protected
+ */
+PolymerElement.prototype._logf = function(var_args) {};
+
 
 /**
  * A Polymer DOM API for manipulating DOM such that local DOM and light DOM
