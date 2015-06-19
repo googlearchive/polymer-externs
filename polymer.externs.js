@@ -485,6 +485,34 @@ Polymer.CaseMap.camelToDashCase = function(camel) {};
 
 
 /**
+ * Settings pulled from
+ * https://github.com/Polymer/polymer/blob/master/src/lib/settings.html
+ */
+Polymer.Settings;
+
+/** @type {boolean} */
+Polymer.Settings.wantShadow;
+
+/** @type {boolean} */
+Polymer.Settings.hasShadow;
+
+/** @type {boolean} */
+Polymer.Settings.nativeShadow;
+
+/** @type {boolean} */
+Polymer.Settings.useShadow;
+
+/** @type {boolean} */
+Polymer.Settings.useNativeShadow;
+
+/** @type {boolean} */
+Polymer.Settings.useNativeImports;
+
+/** @type {boolean} */
+Polymer.Settings.useNativeCustomElements;
+
+
+/**
  * An Event type fired when moving while finger/button is down.
  * state - a string indicating the tracking state:
  *     + start: fired when tracking is first detected (finger/button down and
