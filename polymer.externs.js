@@ -72,6 +72,8 @@ PolymerElement.prototype.observers;
 PolymerElement.prototype.created = function() {};
 /** On ready callback. */
 PolymerElement.prototype.ready = function() {};
+/** On registered callback. */
+PolymerElement.prototype.registered = function() {};
 /** On attached to the DOM callback. */
 PolymerElement.prototype.attached = function() {};
 /** On detached from the DOM callback. */
