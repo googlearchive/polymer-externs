@@ -415,7 +415,7 @@ PolymerDomApi.prototype.querySelector = function(selector) {};
 
 /**
  * @param {string} selector
- * @return {!Array<?HTMLElement>}
+ * @return {!Array<!HTMLElement>}
  */
 PolymerDomApi.prototype.querySelectorAll = function(selector) {};
 
@@ -441,6 +441,12 @@ PolymerDomApi.prototype.removeAttribute = function(attribute) {};
 
 /** @type {?DOMTokenList} */
 PolymerDomApi.prototype.classList;
+
+/**
+ * @param {string} selector
+ * @return {!Array<!HTMLElement>}
+ */
+PolymerDomApi.prototype.queryDistributedElements = function(selector) {};
 
 /**
  * A Polymer Event API.
