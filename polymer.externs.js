@@ -238,6 +238,11 @@ PolymerElement.prototype.setScrollDirection = function(direction, node) {};
  */
 PolymerElement.prototype.async = function(method, wait) {};
 
+/**
+ * @param {...*} var_args
+ */
+PolymerElement.prototype.factoryImpl = function(var_args) {};
+
 Polymer.Base;
 
 /**
