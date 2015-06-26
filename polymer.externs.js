@@ -217,7 +217,7 @@ PolymerElement.prototype.listen = function(node, eventName, methodName) {};
 /**
  * Convenience method to remove an event listener from a given element.
  * @param {!Element} node Element to remove event listener from.
- * @param {string} eventName Name of event to stop listen for.
+ * @param {string} eventName Name of event to stop listening for.
  * @param {string} methodName Name of handler method on this to remove.
  */
 PolymerElement.prototype.unlisten = function(node, eventName, methodName) {};
