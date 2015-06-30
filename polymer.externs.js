@@ -534,6 +534,24 @@ Polymer.Settings.useNativeCustomElements;
 
 
 /**
+ * @see https://github.com/Polymer/polymer/blob/master/src/lib/template/templatizer.html
+ * @polymerBehavior
+ */
+Polymer.Templatizer = {
+  /**
+   * @param {?Object} model
+   * @return {?Element}
+   */
+  stamp: function(model) {},
+
+  /**
+   * @param {?Element} template
+   */
+  templatize: function(template) {},
+};
+
+
+/**
  * An Event type fired when moving while finger/button is down.
  * state - a string indicating the tracking state:
  *     + start: fired when tracking is first detected (finger/button down and
