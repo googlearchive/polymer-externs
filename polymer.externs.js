@@ -263,6 +263,19 @@ Polymer.Base;
 Polymer.Base.async = function(method, wait) {};
 
 /**
+ * Returns a property descriptor object for the property specified.
+ *
+ * This method allows introspecting the configuration of a Polymer element's
+ * properties as configured in its `properties` object.  Note, this method
+ * normalizes shorthand forms of the `properties` object into longhand form.
+ *
+ * @method getPropertyInfo
+ * @param {string} property Name of property to introspect.
+ * @return {Object} Property descriptor for specified property.
+*/
+Polymer.Base.getPropertyInfo = function(property) {};
+
+/**
  * @param {number} handle
  */
 PolymerElement.prototype.cancelAsync = function(handle) {};
