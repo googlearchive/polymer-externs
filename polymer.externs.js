@@ -269,7 +269,6 @@ Polymer.Base.async = function(method, wait) {};
  * properties as configured in its `properties` object.  Note, this method
  * normalizes shorthand forms of the `properties` object into longhand form.
  *
- * @method getPropertyInfo
  * @param {string} property Name of property to introspect.
  * @return {Object} Property descriptor for specified property.
 */
