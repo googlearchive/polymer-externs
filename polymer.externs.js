@@ -174,7 +174,7 @@ PolymerElement.prototype.get = function(path, root) {};
  * This method notifies other paths to the same array that a
  * splice occurred to the array.
  *
- * @param {String} path Path to array.
+ * @param {string} path Path to array.
  * @param {...*} var_args Items to push onto array
  * @return {number} New length of the array.
  */
@@ -189,7 +189,7 @@ PolymerElement.prototype.push = function(path, var_args) {};
  * This method notifies other paths to the same array that a
  * splice occurred to the array.
  *
- * @param {String} path Path to array.
+ * @param {string} path Path to array.
  * @return {*} Item that was removed.
  */
 PolymerElement.prototype.pop = function(path) {};
@@ -204,7 +204,7 @@ PolymerElement.prototype.pop = function(path) {};
  * This method notifies other paths to the same array that a
  * splice occurred to the array.
  *
- * @param {String} path Path to array.
+ * @param {string} path Path to array.
  * @param {number} start Index from which to start removing/inserting.
  * @param {number} deleteCount Number of items to remove.
  * @param {...*} var_args Items to insert into array.
@@ -221,7 +221,7 @@ PolymerElement.prototype.splice = function(path, start, deleteCount, var_args) {
  * This method notifies other paths to the same array that a
  * splice occurred to the array.
  *
- * @param {String} path Path to array.
+ * @param {string} path Path to array.
  * @return {*} Item that was removed.
  */
 PolymerElement.prototype.shift = function(path) {};
@@ -235,7 +235,7 @@ PolymerElement.prototype.shift = function(path) {};
  * This method notifies other paths to the same array that a
  * splice occurred to the array.
  *
- * @param {String} path Path to array.
+ * @param {string} path Path to array.
  * @param {...*} var_args Items to insert info array
  * @return {number} New length of the array.
  */
