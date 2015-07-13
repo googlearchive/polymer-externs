@@ -166,6 +166,82 @@ PolymerElement.prototype.set = function(path, value, root) {};
 PolymerElement.prototype.get = function(path, root) {};
 
 /**
+ * Adds items onto the end of the array at the path specified.
+ *
+ * The arguments after `path` and return value match that of
+ * `Array.prototype.push`.
+ *
+ * This method notifies other paths to the same array that a
+ * splice occurred to the array.
+ *
+ * @param {string} path Path to array.
+ * @param {...*} var_args Items to push onto array
+ * @return {number} New length of the array.
+ */
+PolymerElement.prototype.push = function(path, var_args) {};
+
+/**
+ * Removes an item from the end of array at the path specified.
+ *
+ * The arguments after `path` and return value match that of
+ * `Array.prototype.pop`.
+ *
+ * This method notifies other paths to the same array that a
+ * splice occurred to the array.
+ *
+ * @param {string} path Path to array.
+ * @return {*} Item that was removed.
+ */
+PolymerElement.prototype.pop = function(path) {};
+
+/**
+ * Starting from the start index specified, removes 0 or more items
+ * from the array and inserts 0 or more new itms in their place.
+ *
+ * The arguments after `path` and return value match that of
+ * `Array.prototype.splice`.
+ *
+ * This method notifies other paths to the same array that a
+ * splice occurred to the array.
+ *
+ * @param {string} path Path to array.
+ * @param {number} start Index from which to start removing/inserting.
+ * @param {number} deleteCount Number of items to remove.
+ * @param {...*} var_args Items to insert into array.
+ * @return {!Array} Array of removed items.
+ */
+PolymerElement.prototype.splice = function(path, start, deleteCount, var_args) {};
+
+/**
+ * Removes an item from the beginning of array at the path specified.
+ *
+ * The arguments after `path` and return value match that of
+ * `Array.prototype.pop`.
+ *
+ * This method notifies other paths to the same array that a
+ * splice occurred to the array.
+ *
+ * @param {string} path Path to array.
+ * @return {*} Item that was removed.
+ */
+PolymerElement.prototype.shift = function(path) {};
+
+/**
+ * Adds items onto the beginning of the array at the path specified.
+ *
+ * The arguments after `path` and return value match that of
+ * `Array.prototype.push`.
+ *
+ * This method notifies other paths to the same array that a
+ * splice occurred to the array.
+ *
+ * @param {string} path Path to array.
+ * @param {...*} var_args Items to insert info array
+ * @return {number} New length of the array.
+ */
+PolymerElement.prototype.unshift = function(path, var_args) {};
+
+/**
  * Fire an event.
  *
  * @param {string} type An event name.
