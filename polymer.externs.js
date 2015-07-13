@@ -208,7 +208,7 @@ PolymerElement.prototype.pop = function(path) {};
  * @param {number} start Index from which to start removing/inserting.
  * @param {number} deleteCount Number of items to remove.
  * @param {...*} var_args Items to insert into array.
- * @return {Array} Array of removed items.
+ * @return {!Array} Array of removed items.
  */
 PolymerElement.prototype.splice = function(path, start, deleteCount, var_args) {};
 
