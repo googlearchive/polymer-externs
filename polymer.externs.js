@@ -425,6 +425,21 @@ PolymerElement.prototype.arrayDelete = function(array, item) {};
 PolymerElement.prototype.resolveUrl = function(url) {};
 
 /**
+ * Re-evaluates and applies custom CSS properties based on dynamic
+ * changes to this element's scope, such as adding or removing classes
+ * in this element's local DOM.
+ *
+ * For performance reasons, Polymer's custom CSS property shim relies
+ * on this explicit signal from the user to indicate when changes have
+ * been made that affect the values of custom properties.
+ *
+ * @param {Object=} properties Properties object which is mixed into
+ *   the element's `customStyle` property. This argument provides a shortcut
+ *   for setting `customStyle` and then calling `updateStyles`.
+ */
+PolymerElement.prototype.updateStyles = function(properties) {};
+
+/**
  * Logs a message to the console.
  *
  * @param {!Array} var_args
