@@ -433,9 +433,9 @@ PolymerElement.prototype.resolveUrl = function(url) {};
  * on this explicit signal from the user to indicate when changes have
  * been made that affect the values of custom properties.
  *
- * @param {Object=} properties Properties object which is mixed into
- *   the element's `customStyle` property. This argument provides a shortcut
- *   for setting `customStyle` and then calling `updateStyles`.
+ * @param {Object=} properties Properties object which, if provided is mixed 
+ *     into the element's `customStyle` property. This argument provides a 
+ *     shortcut for setting `customStyle` and then calling `updateStyles`.
  */
 PolymerElement.prototype.updateStyles = function(properties) {};
 
