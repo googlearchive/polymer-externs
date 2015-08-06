@@ -350,6 +350,20 @@ Polymer.Base.async = function(method, wait) {};
 */
 Polymer.Base.getPropertyInfo = function(property) {};
 
+Polymer.Gestures;
+
+/**
+ * Gets the original target of the given event.
+ * 
+ * Cheaper than Polymer.dom(ev).path[0];
+ * See https://github.com/Polymer/polymer/blob/master/src/standard/gestures.html#L191
+ *
+ * @param {Event} ev .
+ * @return {Element} The original target of the event.
+ */
+Polymer.Gestures.findOriginalTarget = function(ev) {};
+
+
 /**
  * @param {number} handle
  */
