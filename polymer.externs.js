@@ -426,8 +426,10 @@ PolymerElement.prototype.importHref = function(href, onload, onerror) {};
 
 /**
  * Delete an element from an array.
- * @param {!Array} array
- * @param {*} item
+ * @param {!Array|string} array Path to array from which to remove the item (or
+ *     the array itself).
+ * @param {*} item Item to remove
+ * @return {!Array} The array with the item removed.
  */
 PolymerElement.prototype.arrayDelete = function(array, item) {};
 
