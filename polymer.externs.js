@@ -755,7 +755,7 @@ Polymer.Templatizer = {
    *   }
    *
    * @param {!HTMLElement} el Element for which to return a template model.
-   * @return {Object<PolymerElement>} Model representing the binding scope for
+   * @return {!PolymerElement} Model representing the binding scope for
    *   the element.
    */
   modelForElement: function(el) {}
