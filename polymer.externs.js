@@ -460,6 +460,11 @@ PolymerElement.prototype.resolveUrl = function(url) {};
 PolymerElement.prototype.updateStyles = function(properties) {};
 
 /**
+ * @type {!Object<string, string|undefined>}
+ */
+PolymerElement.prototype.customStyle;
+
+/**
  * Logs a message to the console.
  *
  * @param {!Array} var_args
@@ -503,6 +508,12 @@ var PolymerDomApi = function() {};
 
 /** @param {!Node} node */
 PolymerDomApi.prototype.appendChild = function(node) {};
+
+/**
+ * @param {!Node} oldNode
+ * @param {!Node} newNode
+ */
+PolymerDomApi.prototype.replaceChild = function(oldNode, newNode) {};
 
 /**
  * @param {!Node} node
