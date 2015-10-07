@@ -249,7 +249,7 @@ PolymerElement.prototype.unshift = function(path, var_args) {};
  * Fire an event.
  *
  * @param {string} type An event name.
- * @param {Object=} detail
+ * @param {*=} detail
  * @param {{
  *   bubbles: (boolean|undefined),
  *   cancelable: (boolean|undefined),
