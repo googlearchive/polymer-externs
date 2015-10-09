@@ -797,6 +797,16 @@ var DomRepeatElement = function() {};
 
 
 /**
+ * Forces the element to render its content. Normally rendering is
+ * asynchronous to a provoking change. This is done for efficiency so
+ * that multiple changes trigger only a single render. The render method
+ * should be called if, for example, template rendering is required to
+ * validate application state.
+ */
+DomRepeatElement.prototype.render = function() {};
+
+
+/**
  * Returns the item associated with a given element stamped by
  * this `dom-repeat`.
  *
@@ -804,6 +814,28 @@ var DomRepeatElement = function() {};
  * @return {*} Item associated with the element.
  */
 DomRepeatElement.prototype.itemForElement = function(el) {};
+
+
+/**
+ * Returns the `Polymer.Collection` key associated with a given
+ * element stamped by this `dom-repeat`.
+ *
+ * @param {!HTMLElement} el Element for which to return the key.
+ * @return {*} Key associated with the element. 
+ */ 
+DomRepeatElement.prototype.keyForElement = function(el) {};
+
+
+/**
+ * Returns the inst index for a given element stamped by this `dom-repeat`.
+ * If `sort` is provided, the index will reflect the sorted order (rather
+ * than the original array order).
+ *
+ * @param {HTMLElement} el Element for which to return the index.
+ * @return {*} Row index associated with the element (note this may
+ *   not correspond to the array index if a user `sort` is applied).
+ */
+DomRepeatElement.prototype.indexForElement = function(el) {};
 
 
 
