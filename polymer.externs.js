@@ -831,7 +831,7 @@ DomRepeatElement.prototype.keyForElement = function(el) {};
  * If `sort` is provided, the index will reflect the sorted order (rather
  * than the original array order).
  *
- * @param {HTMLElement} el Element for which to return the index.
+ * @param {!HTMLElement} el Element for which to return the index.
  * @return {*} Row index associated with the element (note this may
  *   not correspond to the array index if a user `sort` is applied).
  */
