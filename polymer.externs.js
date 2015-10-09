@@ -789,6 +789,25 @@ TemplatizerNode.prototype._templateInstance;
 
 
 /**
+ * @see https://github.com/Polymer/polymer/blob/master/src/lib/template/dom-repeat.html
+ * @extends {PolymerElement}
+ * @constructor
+ */
+var DomRepeatElement = function() {};
+
+
+/**
+ * Returns the item associated with a given element stamped by
+ * this `dom-repeat`.
+ *
+ * @param {!HTMLElement} el Element for which to return the item.
+ * @return {*} Item associated with the element.
+ */
+DomRepeatElement.prototype.itemForElement = function(el) {};
+
+
+
+/**
  * @see https://github.com/Polymer/polymer/blob/master/src/lib/template/array-selector.html
  * @extends {PolymerElement}
  * @constructor
