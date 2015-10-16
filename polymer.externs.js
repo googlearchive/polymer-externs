@@ -41,6 +41,15 @@ PolymerElement.prototype.isAttached;
 PolymerElement.prototype.root;
 
 /**
+ * The root node for the element.
+ * Only exists if running under Shady Dom.
+ * You usually want to use `this.root`.
+ *
+ * @type {?Node|undefined}
+ */
+PolymerElement.prototype.shadyRoot;
+
+/**
  * Returns the first node in this element’s local DOM that matches selector.
  * @param {string} selector
  */
@@ -821,8 +830,8 @@ DomRepeatElement.prototype.itemForElement = function(el) {};
  * element stamped by this `dom-repeat`.
  *
  * @param {!HTMLElement} el Element for which to return the key.
- * @return {*} Key associated with the element. 
- */ 
+ * @return {*} Key associated with the element.
+ */
 DomRepeatElement.prototype.keyForElement = function(el) {};
 
 
@@ -950,7 +959,7 @@ var PolymerSpliceChange;
 /**
  * The interface that iconsets should obey. Iconsets are registered by setting
  * their name in the IronMeta 'iconset' db, and a value of type Polymer.Iconset.
- * 
+ *
  * Used by iron-icon but needs to live here since iron-icon, iron-iconset, etc don't
  * depend on each other at all and talk only through iron-meta.
  *
