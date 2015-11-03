@@ -595,6 +595,15 @@ PolymerDomApi.prototype.setAttribute = function(attribute, value) {};
 /** @param {string} attribute */
 PolymerDomApi.prototype.removeAttribute = function(attribute) {};
 
+/**
+ * @param {Function} callback
+ * @return {Object}
+ */
+PolymerDomApi.prototype.observeNodes = function(callback) {};
+
+/** @param {Object} handle */
+PolymerDomApi.prototype.unobserveNodes = function(handle) {};
+
 /** @type {?DOMTokenList} */
 PolymerDomApi.prototype.classList;
 
