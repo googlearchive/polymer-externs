@@ -597,11 +597,11 @@ PolymerDomApi.prototype.removeAttribute = function(attribute) {};
 
 /**
  * @param {!Function} callback
- * @return {!{fn: !Function=, _nodes: !Array<!Node>}}
+ * @return {!{fn: (!Function|undefined), _nodes: !Array<!Node>}}
  */
 PolymerDomApi.prototype.observeNodes = function(callback) {};
 
-/** @param {!{fn: !Function=, _nodes: !Array<!Node>}} handle */
+/** @param {!{fn: (!Function|undefined), _nodes: !Array<!Node>}} handle */
 PolymerDomApi.prototype.unobserveNodes = function(handle) {};
 
 /** @type {?DOMTokenList} */
