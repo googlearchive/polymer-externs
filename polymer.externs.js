@@ -636,6 +636,16 @@ PolymerEventApi.prototype.localTarget;
 /** @type {?Array<!Element>|undefined} */
 PolymerEventApi.prototype.path;
 
+
+Polymer.Async;
+
+/**
+ * polymer-onerror experiment relies on this private API, so expose it only
+ * to let the compilation work. Do not use in user code.
+ */
+Polymer.Async._atEndOfMicrotask = function() {};
+
+
 /**
  * Returns a Polymer-friendly API for manipulating DOM of a specified node or
  * an event API for a specified event..
