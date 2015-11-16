@@ -255,6 +255,22 @@ PolymerElement.prototype.shift = function(path) {};
 PolymerElement.prototype.unshift = function(path, var_args) {};
 
 /**
+ * Returns a list of element children distributed to this element's
+ * `<content>`.
+ *
+ * If this element contans more than one `<content>` in its
+ * local DOM, an optional selector may be passed to choose the desired
+ * content.  This method differs from `getContentChildNodes` in that only
+ * elements are returned.
+ *
+ * @param {string=} slctr CSS selector to choose the desired
+ *   `<content>`.  Defaults to `content`.
+ * @return {!Array<!HTMLElement>} List of distributed nodes for the
+ *   `<content>`.
+ */
+PolymerElement.prototype.getContentChildren = function(slctr) {};
+
+/**
  * Fire an event.
  *
  * @param {string} type An event name.
