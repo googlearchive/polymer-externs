@@ -538,6 +538,12 @@ PolymerElement.prototype._logf = function(var_args) {};
  */
 var PolymerDomApi = function() {};
 
+/**
+ * @param {Node} node
+ * @return {boolean}
+ */
+PolymerDomApi.prototype.deepContains = function(node) {};
+
 /** @param {!Node} node */
 PolymerDomApi.prototype.appendChild = function(node) {};
 
