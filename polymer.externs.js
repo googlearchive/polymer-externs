@@ -24,7 +24,7 @@ var PolymerElement = function() {};
 
 /**
  * A mapping from ID to element in this Polymer Element's local DOM.
- * @type {!Object}
+ * @type {!Object<string, !Element>}
  */
 PolymerElement.prototype.$;
 
