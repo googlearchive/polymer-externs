@@ -52,6 +52,7 @@ PolymerElement.prototype.shadyRoot;
 /**
  * Returns the first node in this element’s local DOM that matches selector.
  * @param {string} selector
+ * @return {Element} Element found by the selector, or null if not found.
  */
 PolymerElement.prototype.$$ = function(selector) {};
 
