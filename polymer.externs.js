@@ -356,6 +356,14 @@ PolymerElement.prototype.async = function(method, wait) {};
  */
 PolymerElement.prototype.factoryImpl = function(var_args) {};
 
+/**
+ * Apply style scoping to the specified container and all its descendants.
+ * @param {!Element} container Element to scope.
+ * @param {boolean} shouldObserve When true, monitors the container for changes
+ *   and re-applies scoping for any future changes.
+ */
+PolymerElement.prototype.scopeSubtree = function(container, shouldObserve) {};
+
 Polymer.Base;
 
 /**
