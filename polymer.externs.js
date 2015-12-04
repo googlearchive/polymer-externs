@@ -271,6 +271,22 @@ PolymerElement.prototype.unshift = function(path, var_args) {};
 PolymerElement.prototype.getContentChildren = function(slctr) {};
 
 /**
+ * Apply style scoping to the specified `container` and all its
+ * descendants. If `shouldObserve` is true, changes to the container are
+ * monitored via mutation observer and scoping is applied.
+ *
+ * This method is useful for ensuring proper local DOM CSS scoping
+ * for elements created in this local DOM scope, but out of the
+ * control of this element (i.e., by a 3rd-party library)
+ * when running in non-native Shadow DOM environments.
+ *
+ * @param {Element} container Element to scope.
+ * @param {boolean} shouldObserve When true, monitors the container
+ *   for changes and re-applies scoping for any future changes.
+ */
+PolymerElement.prototype.scopeSubtree: function(container, shouldObserve) {};
+
+/**
  * Fire an event.
  *
  * @param {string} type An event name.
