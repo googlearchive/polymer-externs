@@ -564,6 +564,9 @@ PolymerDomApi.prototype.insertBefore = function(node, beforeNode) {};
 /** @param {!Node} node */
 PolymerDomApi.prototype.removeChild = function(node) {};
 
+/** @type {!Array<!HTMLElement>} */
+PolymerDomApi.prototype.children;
+
 /** @type {!Array<!Node>} */
 PolymerDomApi.prototype.childNodes;
 
