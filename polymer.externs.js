@@ -279,7 +279,7 @@ PolymerElement.prototype.getContentChildren = function(slctr) {};
  * @param {{
  *   bubbles: (boolean|undefined),
  *   cancelable: (boolean|undefined),
- *   node: (!HTMLElement|undefined)}=} options
+ *   node: (!EventTarget|undefined)}=} options
  * @return {Object} event
  */
 PolymerElement.prototype.fire = function(type, detail, options) {};
