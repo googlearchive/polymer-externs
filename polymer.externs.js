@@ -571,6 +571,46 @@ PolymerDomApi.prototype.insertBefore = function(node, beforeNode) {};
 /** @param {!Node} node */
 PolymerDomApi.prototype.removeChild = function(node) {};
 
+/**
+ * @typedef {function({
+ *   target: Node,
+ *   addedNodes: Array<Node>,
+ *   removedNodes: Array<Node>
+ * })}
+ */
+PolymerDomApi.ObserveCallback;
+
+/**
+ * A virtual type for observer callback handles.
+ *
+ * @private @constructor
+ */
+PolymerDomApi.ObserveHandle = function() {};
+
+/**
+ * Notifies callers about changes to the element's effective child nodes,
+ * the same list as returned by `getEffectiveChildNodes`.
+ *
+ * @param {PolymerDomApi.ObserveCallback} callback The supplied callback
+ * is called with an `info` argument which is an object that provides
+ * the `target` on which the changes occurred, a list of any nodes
+ * added in the `addedNodes` array, and nodes removed in the
+ * `removedNodes` array.
+ *
+ * @return {PolymerDomApi.ObserveHandle} Handle which is the argument to
+ * `unobserveNodes`.
+ */
+PolymerDomApi.prototype.observeNodes = function(callback) {};
+
+/**
+ * Stops observing changes to the element's effective child nodes.
+ *
+ * @param {PolymerDomApi.ObserveHandle} handle The handle for the
+ * callback that should no longer receive notifications. This
+ * handle is returned from `observeNodes`.
+ */
+PolymerDomApi.prototype.unobserveNodes = function(handle) {};
+
 /** @type {!Array<!HTMLElement>} */
 PolymerDomApi.prototype.children;
 
