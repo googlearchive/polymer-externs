@@ -722,7 +722,6 @@ Polymer.dom = function(nodeOrEvent) {};
 
 Polymer.dom.flush = function() {};
 
-
 Polymer.CaseMap;
 
 /**
