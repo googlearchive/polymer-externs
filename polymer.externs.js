@@ -722,8 +722,6 @@ Polymer.dom = function(nodeOrEvent) {};
 
 Polymer.dom.flush = function() {};
 
-/** @param {!function()} debouncer */
-Polymer.dom.addDebouncer = function(debouncer) {};
 
 Polymer.CaseMap;
 
