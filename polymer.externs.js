@@ -872,7 +872,13 @@ Polymer.Templatizer = {
    * @return {(!PolymerElement)|undefined} Model representing the binding scope for
    *   the element.
    */
-  modelForElement: function(el) {}
+  modelForElement: function(el) {},
+  
+  /**
+   * @param {function()} fn
+   * @protected
+   */
+   _debounceTemplate: function(fn) {}
 };
 
 
