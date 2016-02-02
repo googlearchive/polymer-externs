@@ -865,7 +865,7 @@ Polymer.Templatizer = {
    *     model.set('item.checked', true);
    *   }
    *
-   * @param {!HTMLElement} el Element for which to return a template model.
+   * @param {?HTMLElement} el Element for which to return a template model.
    * @return {(!PolymerElement)|undefined} Model representing the binding scope for
    *   the element.
    */
