@@ -722,6 +722,24 @@ Polymer.dom = function(nodeOrEvent) {};
 
 Polymer.dom.flush = function() {};
 
+/** @constructor */
+Polymer.Debouncer = function() {};
+
+Polymer.Debouncer.prototype = {
+  /**
+   * @param {function()} callback
+   * @param {number} wait
+   */
+  go: function(callback, wait) {},
+
+  stop: function() {},
+
+  complete: function() {}
+};
+
+/** @param {!Polymer.Debouncer} debouncer */
+Polymer.dom.addDebouncer = function(debouncer) {};
+
 Polymer.CaseMap;
 
 /**
@@ -869,7 +887,13 @@ Polymer.Templatizer = {
    * @return {(!PolymerElement)|undefined} Model representing the binding scope for
    *   the element.
    */
-  modelForElement: function(el) {}
+  modelForElement: function(el) {},
+  
+  /**
+   * @param {function()} fn
+   * @protected
+   */
+   _debounceTemplate: function(fn) {}
 };
 
 
