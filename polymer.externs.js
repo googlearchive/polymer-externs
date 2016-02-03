@@ -723,7 +723,7 @@ Polymer.dom = function(nodeOrEvent) {};
 Polymer.dom.flush = function() {};
 
 /** @constructor */
-Polymer.Debouncer;
+Polymer.Debouncer = function() {};
 
 Polymer.Debouncer.prototype = {
   /**
