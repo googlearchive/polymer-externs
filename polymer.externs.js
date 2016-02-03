@@ -722,6 +722,24 @@ Polymer.dom = function(nodeOrEvent) {};
 
 Polymer.dom.flush = function() {};
 
+/** @constructor */
+Polymer.Debouncer;
+
+Polymer.Debouncer.prototype = {
+  /**
+   * @param {function()} callback
+   * @param {number} wait
+   */
+  go: function(callback, wait) {},
+
+  stop: function() {},
+
+  complete: function() {}
+};
+
+/** @param {!Polymer.Debouncer} debouncer */
+Polymer.dom.addDebouncer = function(debouncer) {};
+
 Polymer.CaseMap;
 
 /**
