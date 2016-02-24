@@ -888,7 +888,7 @@ Polymer.Templatizer = {
    *   the element.
    */
   modelForElement: function(el) {},
-  
+
   /**
    * @param {function()} fn
    * @protected
@@ -1099,14 +1099,14 @@ Polymer.ResolveUrl = {};
 
 /**
  * @param {string} cssText Some CSS text taken from ownerDocument.
- * @param {Document} ownerDocument The source of the css.
+ * @param {!Document} ownerDocument The source of the css.
  * @return {string} The given CSS text with its URLs rewritten to be based on
  *     the primary document of this window rather than the given ownerDocument.
  */
 Polymer.ResolveUrl.resolveCss = function(cssText, ownerDocument) {}
 /**
- * @param {Element} element An element whose URL attributes need to be renormed.
- * @param {Document} ownerDocument The document whose URL is the base of the
+ * @param {!Element} element An element whose URL attributes need to be renormed.
+ * @param {!Document} ownerDocument The document whose URL is the base of the
  *     element's current attributes.
  */
 Polymer.ResolveUrl.resolveAttrs = function(element, ownerDocument) {}
