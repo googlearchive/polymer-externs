@@ -506,6 +506,13 @@ PolymerElement.prototype.updateStyles = function(properties) {};
 PolymerElement.prototype.customStyle;
 
 /**
+ * Returns the computed style value for the given property.
+ * @param {string} property
+ * @return {string} the computed value
+ */
+PolymerElement.prototype.getComputedStyleValue = function(property) {};
+
+/**
  * Logs a message to the console.
  *
  * @param {!Array} var_args
