@@ -365,6 +365,25 @@ PolymerElement.prototype.factoryImpl = function(var_args) {};
  */
 PolymerElement.prototype.scopeSubtree = function(container, shouldObserve) {};
 
+/**
+ * Aliases one data path as another, such that path notifications from one
+ * are routed to the other.
+ *
+ * @param {string} to Target path to link.
+ * @param {string} from Source path to link.
+ */
+PolymerElement.prototype.linkPaths = function(to, from) {}
+
+/**
+ * Removes a data path alias previously established with `linkPaths`.
+ *
+ * Note, the path to unlink should be the target (`to`) used when
+ * linking the paths.
+ *
+ * @param {string} path Target path to unlink.
+ */
+PolymerElement.prototype.unlinkPaths = function(path) {}
+
 Polymer.Base;
 
 /**
