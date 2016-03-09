@@ -483,7 +483,7 @@ PolymerElement.prototype.importHref = function(href, onload, onerror) {};
 
 /**
  * Checks whether an element is in this element's light DOM tree.
- * @param {?Node} node The element to be checked.
+ * @param {?Node|EventTarget} node The element to be checked.
  * @return {boolean} true if node is in this element's light DOM tree.
  */
 PolymerElement.prototype.isLightDescendant = function(node) {};
