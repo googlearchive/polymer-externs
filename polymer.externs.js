@@ -630,6 +630,9 @@ PolymerDomApi.prototype.textContent;
 /** @type {string} */
 PolymerDomApi.prototype.innerHTML;
 
+/** @type {?HTMLElement} */
+PolymerDomApi.prototype.activeElement;
+
 /**
  * @param {string} selector
  * @return {?HTMLElement}
