@@ -1146,3 +1146,19 @@ Polymer.ResolveUrl.resolveAttrs = function(element, ownerDocument) {}
  *     the primary document of this window rather than the given url.
  */
 Polymer.ResolveUrl.resolveUrl = function(url, baseURI) {}
+
+Polymer.RenderStatus;
+
+/**
+ * Makes callback when first render occurs or immediately if render has occured.
+ * @param {!function()} cb Callback function to be invoked.
+ */
+Polymer.RenderStatus.whenReady = function(cb) {}
+
+/**
+ * Queue up function call on next render.
+ * @param {!Element} element The element on which the function call is made.
+ * @param {!function()} fn The function called on next render.
+ * @param {...*} args The function arguments.
+ */
+Polymer.RenderStatus.afterNextRender = function(element, fn, args) {}
