@@ -289,7 +289,7 @@ PolymerElement.prototype.fire = function(type, detail, options) {};
  * bool is truthy and removing it if bool is falsey. If node is specified, sets
  * the class on node instead of the host element.
  * @param {string} name
- * @param {boolean} bool
+ * @param {boolean=} bool
  * @param {HTMLElement=} node
  */
 PolymerElement.prototype.toggleClass = function(name, bool, node) {};
