@@ -271,6 +271,36 @@ PolymerElement.prototype.unshift = function(path, var_args) {};
 PolymerElement.prototype.getContentChildren = function(slctr) {};
 
 /**
+ * Returns a list of nodes that are the effective childNodes. The effective
+ * childNodes list is the same as the element's childNodes except that
+ * any `<content>` elements are replaced with the list of nodes distributed
+ * to the `<content>`, the result of its `getDistributedNodes` method.
+ *
+ * @return {!Array<!Node>} List of effective child nodes.
+ */
+PolymerElement.prototype.getEffectiveChildNodes = function() {};
+
+/**
+ * Returns a list of elements that are the effective children. The effective
+ * children list is the same as the element's children except that
+ * any `<content>` elements are replaced with the list of elements
+ * distributed to the `<content>`.
+ *
+ * @return {!Array<!Node>} List of effective children.
+ */
+PolymerElement.prototype.getEffectiveChildren = function() {};
+
+/**
+ * Returns a string of text content that is the concatenation of the
+ * text content's of the element's effective childNodes (the elements
+ * returned by <a href="#getEffectiveChildNodes>getEffectiveChildNodes</a>.
+ *
+ * @return {string} A concatenated string of all effective childNode text
+ *   content.
+ */
+PolymerElement.prototype.getEffectiveTextContent = function() {};
+
+/**
  * Fire an event.
  *
  * @param {string} type An event name.
