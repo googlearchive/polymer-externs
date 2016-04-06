@@ -745,6 +745,12 @@ PolymerDomApi.prototype.classList;
 PolymerDomApi.prototype.queryDistributedElements = function(selector) {};
 
 /**
+ * @param {string} selector
+ * @return {!Array<!HTMLElement>}
+ */
+PolymerDomApi.prototype.queryEffectiveChildren = function(selector) {};
+
+/**
  * A Polymer Event API.
  *
  * @constructor
