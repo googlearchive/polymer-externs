@@ -302,6 +302,12 @@ PolymerElement.prototype.getEffectiveChildren = function() {};
 PolymerElement.prototype.getEffectiveTextContent = function() {};
 
 /**
+ * @param {string} selector
+ * @return {?HTMLElement}
+ */
+PolymerElement.prototype.queryEffectiveChildren = function(selector) {};
+
+/**
  * Fire an event.
  *
  * @param {string} type An event name.
@@ -743,12 +749,6 @@ PolymerDomApi.prototype.classList;
  * @return {!Array<!HTMLElement>}
  */
 PolymerDomApi.prototype.queryDistributedElements = function(selector) {};
-
-/**
- * @param {string} selector
- * @return {!Array<!HTMLElement>}
- */
-PolymerDomApi.prototype.queryEffectiveChildren = function(selector) {};
 
 /**
  * A Polymer Event API.
