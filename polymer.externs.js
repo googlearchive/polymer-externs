@@ -573,7 +573,7 @@ PolymerElement.prototype.customStyle;
  * @return {string} the computed value
  */
 PolymerElement.prototype.getComputedStyleValue = function(property) {};
-
+
 /**
  * Logs a message to the console.
  *
