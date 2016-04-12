@@ -443,6 +443,13 @@ Polymer.Base.async = function(method, wait) {};
 */
 Polymer.Base.getPropertyInfo = function(property) {};
 
+/**
+ * @param {string} path Path that should be notified.
+ * @param {!Array<!PolymerSplice>} splices Array of splice records indicating
+ *     ordered changes that occurred to the array.                                                                                  
+ */
+Polymer.Base.notifySplices = function(path, splices) {};
+
 Polymer.Gestures;
 
 /**
@@ -566,7 +573,7 @@ PolymerElement.prototype.customStyle;
  * @return {string} the computed value
  */
 PolymerElement.prototype.getComputedStyleValue = function(property) {};
-
+
 /**
  * Logs a message to the console.
  *
@@ -1115,7 +1122,9 @@ var PolymerTouchEvent;
  * @typedef {{
  *   index: number,
  *   removed: !Array,
- *   addedCount: number
+ *   addedCount: number,
+ *   object: !Array,
+ *   type: string,
  * }}
  */
 var PolymerSplice;
