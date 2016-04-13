@@ -140,6 +140,13 @@ PolymerElement.prototype.domHost;
 PolymerElement.prototype.notifyPath = function(path, value, fromAbove) {};
 
 /**
+ * @param {string} path Path that should be notified.
+ * @param {!Array<!PolymerSplice>} splices Array of splice records indicating
+ *     ordered changes that occurred to the array.                                                                                  
+ */
+PolymerElement.prototype.notifySplices = function(path, splices) {};
+
+/**
  * Convienence method for setting a value to a path and notifying any
  * elements bound to the same path.
  *
@@ -1115,7 +1122,9 @@ var PolymerTouchEvent;
  * @typedef {{
  *   index: number,
  *   removed: !Array,
- *   addedCount: number
+ *   addedCount: number,
+ *   object: !Array,
+ *   type: string,
  * }}
  */
 var PolymerSplice;
