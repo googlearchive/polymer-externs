@@ -140,6 +140,13 @@ PolymerElement.prototype.domHost;
 PolymerElement.prototype.notifyPath = function(path, value, fromAbove) {};
 
 /**
+ * @param {string} path Path that should be notified.
+ * @param {!Array<!PolymerSplice>} splices Array of splice records indicating
+ *     ordered changes that occurred to the array.                                                                                  
+ */
+PolymerElement.prototype.notifySplices = function(path, splices) {};
+
+/**
  * Convienence method for setting a value to a path and notifying any
  * elements bound to the same path.
  *
@@ -442,13 +449,6 @@ Polymer.Base.async = function(method, wait) {};
  * @return {Object} Property descriptor for specified property.
 */
 Polymer.Base.getPropertyInfo = function(property) {};
-
-/**
- * @param {string} path Path that should be notified.
- * @param {!Array<!PolymerSplice>} splices Array of splice records indicating
- *     ordered changes that occurred to the array.                                                                                  
- */
-Polymer.Base.notifySplices = function(path, splices) {};
 
 Polymer.Gestures;
 
