@@ -1207,3 +1207,38 @@ Polymer.RenderStatus.whenReady = function(cb) {}
  * @param {...*} args The function arguments.
  */
 Polymer.RenderStatus.afterNextRender = function(element, fn, args) {}
+
+
+Polymer.IronOverlay;
+
+/**
+ * @extends HTMLElement
+ * @constructor
+ */
+Polymer.IronOverlay.OverlayElement = function(){};
+
+// TODO(garlicnation): follow up with iron-overlay maintainers and clean up
+Polymer.IronOverlay.OverlayElement.prototype = {
+  /** @type {function()} */
+  _applyFocus: null,
+  /** @type {boolean} */
+  transitioning: null,
+  /** @type {boolean} */
+  alwaysOnTop: null,
+  /** @type {function()} */
+  _prepareRenderOpened: null,
+  /** @type {function()} */
+  _renderOpened: null,
+  /** @type {function()} */
+  _renderClosed: null,
+  /** @type {{prepare: function()}} */
+  backdropElement: null,
+  /** @type {function(Event)} */
+  _onCaptureClick: null,
+  /** @type {function(Event)} */
+  _onCaptureFocus: null,
+  /** @type {function(Event)} */
+  _onCaptureEsc: null,
+  /** @type {function(Event)} */
+  _onCaptureTab: null
+}
