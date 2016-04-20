@@ -1229,7 +1229,7 @@ Polymer.AppLayout.ElementWithBackground = function(){};
 Polymer.AppLayout.ElementWithBackground.prototype = {
   /** @type Polymer.AppLayout.LocalDomWithBackground */
   $: null,
-  /** Checks for content below the element */
+  /** Returns true if there's content below the current element */
   isContentBelow: function(){},
   /** Updates the elements scroll state */
   _updateScrollState: function(){},
