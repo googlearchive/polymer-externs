@@ -1229,12 +1229,12 @@ Polymer.AppLayout.ElementWithBackground = function(){};
 Polymer.AppLayout.ElementWithBackground.prototype = {
   /** @type {!Polymer.AppLayout.LocalDomWithBackground} */
   $: null,
-  /** @return boolean True if there's content below the current element */
+  /** @return {boolean} True if there's content below the current element */
   isContentBelow: function(){},
   /** Updates the elements scroll state */
   _updateScrollState: function(){},
-  /** @return boolean true if the element is on screen */
+  /** @return {boolean} true if the element is on screen */
   isOnScreen: function(){},
-  /** @type Number Internal bookkeeping to track screen position */
+  /** @type {number} Internal bookkeeping to track screen position */
   _deltaHeight: 0,
 }
