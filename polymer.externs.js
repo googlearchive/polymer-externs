@@ -1210,9 +1210,7 @@ Polymer.RenderStatus.afterNextRender = function(element, fn, args) {}
 
 Polymer.AppLayout;
 
-/**
- * @constructor
- */
+/** @constructor */
 Polymer.AppLayout.LocalDomWithBackground = function(){};
 /** @type {!HTMLElement} */
 Polymer.AppLayout.LocalDomWithBackground.prototype.backgroundFrontLayer;
