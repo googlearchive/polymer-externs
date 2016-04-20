@@ -1227,14 +1227,14 @@ Polymer.AppLayout.ElementWithBackground = function(){};
 
 // TODO(garlicnation): Follow up with app-layout team and remove private api from this prototype
 Polymer.AppLayout.ElementWithBackground.prototype = {
-  /** @type Polymer.AppLayout.LocalDomWithBackground */
+  /** @type {!Polymer.AppLayout.LocalDomWithBackground} */
   $: null,
-  /** Returns true if there's content below the current element */
+  /** @return boolean True if there's content below the current element */
   isContentBelow: function(){},
   /** Updates the elements scroll state */
   _updateScrollState: function(){},
-  /** Return true if the element is on screen */
+  /** @return boolean true if the element is on screen */
   isOnScreen: function(){},
-  /** Internal bookkeeping to track screen position */
+  /** @type Number Internal bookkeeping to track screen position */
   _deltaHeight: 0,
 }
