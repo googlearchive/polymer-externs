@@ -1221,7 +1221,7 @@ Polymer.AppLayout.LocalDomWithBackground.prototype.background;
 
 /**
  * @constructor
- * @extends PolymerElement
+ * @extends {PolymerElement}
  */
 Polymer.AppLayout.ElementWithBackground = function(){};
 
