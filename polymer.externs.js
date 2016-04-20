@@ -142,7 +142,7 @@ PolymerElement.prototype.notifyPath = function(path, value, fromAbove) {};
 /**
  * @param {string} path Path that should be notified.
  * @param {!Array<!PolymerSplice>} splices Array of splice records indicating
- *     ordered changes that occurred to the array.                                                                                  
+ *     ordered changes that occurred to the array.
  */
 PolymerElement.prototype.notifySplices = function(path, splices) {};
 
@@ -1207,3 +1207,34 @@ Polymer.RenderStatus.whenReady = function(cb) {}
  * @param {...*} args The function arguments.
  */
 Polymer.RenderStatus.afterNextRender = function(element, fn, args) {}
+
+Polymer.AppLayout;
+
+/** @constructor */
+Polymer.AppLayout.LocalDomWithBackground = function(){};
+/** @type {!HTMLElement} */
+Polymer.AppLayout.LocalDomWithBackground.prototype.backgroundFrontLayer;
+/** @type {!HTMLElement} */
+Polymer.AppLayout.LocalDomWithBackground.prototype.backgroundRearLayer;
+/** @type {!HTMLElement} */
+Polymer.AppLayout.LocalDomWithBackground.prototype.background;
+
+/**
+ * @constructor
+ * @extends {PolymerElement}
+ */
+Polymer.AppLayout.ElementWithBackground = function(){};
+
+// TODO(garlicnation): Follow up with app-layout team and remove private api from this prototype
+Polymer.AppLayout.ElementWithBackground.prototype = {
+  /** @type {!Polymer.AppLayout.LocalDomWithBackground} */
+  $: null,
+  /** @return {boolean} True if there's content below the current element */
+  isContentBelow: function(){},
+  /** Updates the elements scroll state */
+  _updateScrollState: function(){},
+  /** @return {boolean} true if the element is on screen */
+  isOnScreen: function(){},
+  /** @type {number} Internal bookkeeping to track screen position */
+  _deltaHeight: 0,
+}
